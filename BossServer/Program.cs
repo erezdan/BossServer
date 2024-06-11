@@ -9,6 +9,9 @@ using BossServer;
 var builder = WebApplication.CreateBuilder(args);
 
 // Load MongoDB settings from configuration
+builder.Configuration.AddJsonFile("appsettings.json")
+                     .AddJsonFile("appsettings.Secrets.json", optional: true, reloadOnChange: true);
+
 builder.Services.Configure<MongoDBSettings>(
     builder.Configuration.GetSection("MongoDB"));
 

@@ -32,3 +32,4 @@ bld/
 *.log
 *.DS_Store
 Thumbs.db
+appsettings.Secrets.json
